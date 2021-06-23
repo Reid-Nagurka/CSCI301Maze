@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">A Legendary Labyrinth</string>
+    <string-array name="builder">
+        <item>DFS</item>
+        <item>Prim</item>
+        <item>Eller</item>
+    </string-array>
+
+    <string-array name="driver">
+        <item>Manual</item>
+        <item>Wizard</item>
+        <item>Wall Follower</item>
+        <item>Pledge</item>
+    </string-array>
+    <string name="manual">Manual Driver</string>
+    <string name="title_activity_generating">GeneratingActivity</string>
+</resources>

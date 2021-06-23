@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="reidnagurka.cs301.cs.wm.edu.amazebyreidnagurka.amazebyreidnagurka.ui.PlayActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/winButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="68dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="76dp"
+            android:onClick="winButtonHandler"
+            android:text="Win" />
+
+        <Button
+            android:id="@+id/loseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/winButton"
+            android:layout_marginEnd="67dp"
+            android:layout_marginRight="67dp"
+            android:onClick="loseButtonHandler"
+            android:text="Lose" />
+
+        <Button
+            android:id="@+id/upButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/downButton"
+            android:layout_centerHorizontal="true"
+            android:onClick="upButtonHandler"
+            android:text="Up"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/downButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_toEndOf="@+id/leftButton"
+            android:layout_toRightOf="@+id/leftButton"
+            android:onClick="downButtonHandler"
+            android:text="Down"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/rightButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/downButton"
+            android:layout_marginBottom="22dp"
+            android:layout_toEndOf="@+id/upButton"
+            android:layout_toRightOf="@+id/upButton"
+            android:onClick="rightButtonHandler"
+            android:text="Right"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/leftButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/rightButton"
+            android:layout_alignBottom="@+id/rightButton"
+            android:layout_toLeftOf="@+id/upButton"
+            android:layout_toStartOf="@+id/upButton"
+            android:onClick="leftButtonHandler"
+            android:text="Left"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/playPauseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:onClick="playPauseButtonHandler"
+            android:src="@android:drawable/ic_media_play"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/pauseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/playPauseButton"
+            android:layout_alignEnd="@+id/playPauseButton"
+            android:layout_alignRight="@+id/playPauseButton"
+            android:onClick="playPauseButtonHandler"
+            android:src="@android:drawable/ic_media_pause"
+            android:visibility="invisible" />
+
+        <ProgressBar
+            android:id="@+id/energyProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/upButton"
+            android:layout_marginBottom="28dp"
+            android:layout_toLeftOf="@+id/leftButton"
+            android:layout_toStartOf="@+id/leftButton" />
+
+        <TextView
+            android:id="@+id/energyRemainingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/upButton"
+            android:layout_alignLeft="@+id/energyProgressBar"
+            android:layout_alignStart="@+id/energyProgressBar"
+            android:text="Energy Remaining" />
+
+        <Button
+            android:id="@+id/wallsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/playPauseButton"
+            android:layout_marginTop="11dp"
+            android:onClick="wallsButtonHandler"
+            android:text="Walls" />
+
+        <Button
+            android:id="@+id/solutionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/mapButton"
+            android:onClick="solutionButtonHandler"
+            android:text="Solution" />
+
+        <Button
+            android:id="@+id/mapButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/playPauseButton"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="19dp"
+            android:onClick="mapButtonHandler"
+            android:text="Map" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

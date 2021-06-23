@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="reidnagurka.cs301.cs.wm.edu.amazebyreidnagurka.amazebyreidnagurka.ui.AMazeActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/wrenHome"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:src="@mipmap/title_picture" />
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignBaseline="@+id/revisitButton"
+            android:layout_alignBottom="@+id/revisitButton"
+            android:layout_toEndOf="@+id/skillTextView"
+            android:layout_toRightOf="@+id/skillTextView"
+            android:onClick="startButtonClickHandler"
+            android:text="Explore" />
+
+        <SeekBar
+            android:id="@+id/skillSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/revisitButton"
+            android:layout_marginBottom="96dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_toEndOf="@+id/skillTextView"
+            android:layout_toRightOf="@+id/skillTextView"
+            android:thumb="@android:drawable/presence_online" />
+
+        <Button
+            android:id="@+id/revisitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="72dp"
+            android:layout_marginStart="72dp"
+            android:layout_toEndOf="@+id/startButton"
+            android:layout_toRightOf="@+id/startButton"
+            android:onClick="revisitButtonHandler"
+            android:text="Revisit" />
+
+        <TextView
+            android:id="@+id/skillTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_alignBottom="@+id/skillSeekBar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:text="Skill: "
+            tools:layout_editor_absoluteX="34dp"
+            tools:layout_editor_absoluteY="308dp" />
+
+        <TextView
+            android:id="@+id/selectedSkill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/skillTextView"
+            android:layout_marginBottom="22dp"
+            android:layout_toEndOf="@+id/startButton"
+            android:layout_toRightOf="@+id/startButton"
+            android:text="0" />
+
+        <Spinner
+            android:id="@+id/mazeBuilderSpinner"
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/revisitButton"
+            android:layout_alignLeft="@+id/revisitButton"
+            android:layout_alignStart="@+id/revisitButton" />
+
+        <Spinner
+            android:id="@+id/driverSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/revisitButton"
+            android:layout_toLeftOf="@+id/revisitButton"
+            android:layout_marginBottom="10dp"
+            android:layout_toStartOf="@+id/revisitButton" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
